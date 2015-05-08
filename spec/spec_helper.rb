@@ -21,6 +21,7 @@ require "environment"
 require "factory_girl"
 require "database_cleaner"
 require_relative "./factories.rb"
+require "rack/test"
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   
