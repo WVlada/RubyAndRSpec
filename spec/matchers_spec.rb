@@ -1,5 +1,7 @@
 # 10 najcesce koriscenih rspec-ova
 describe "Matchers" do #ovako pasujemo samo string u blok. Kod Boostrapa smo ubacivali klasu
+# fdescribe - za fokus svih testova ovde
+# xdescribe - za skip celog suita
 
     it "assets on equality" do
         number = 3
@@ -49,16 +51,28 @@ describe "Matchers" do #ovako pasujemo samo string u blok. Kod Boostrapa smo uba
         }.to throw_symbol :oops
     end
     
+    #xit "asserts on predicates" do
+    #it "asserts on predicates", skip: :true do
+    #it "asserts on predicates", skip: "Za sada nije toliko vazan" do
     it "asserts on predicates" do
+    #pending
+    #skip
         class A
             def good?
                 # true
                 A
+                #raise ArgumentError
             end
         end
         expect(A.new).to be_good
         #be_good se interpretira u kontekstu klase A, i cita se od underscorea udesno, dodavajuci ?
         #samo A prolazi, jer se u predicat expectation u stvari poziva be_truthy metod
+    end
+    
+    #fit "ovo je mnogo vazniji test da se fokusiram sada" do
+    it "ovo je mnogo vazniji test da se fokusiram sada", focus: true do
+        # startuje se sa rspec --tag focus
+        #fail
     end
     
     it "asserts on collections" do

@@ -88,6 +88,6 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
-config.after(:example) {puts "upravo sam zavrsio test"}
+#config.after(:example) {puts "upravo sam zavrsio test"}
 config.before(:suite) {puts "Pocinje test:"}
 end

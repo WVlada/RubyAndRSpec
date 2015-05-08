@@ -8,7 +8,7 @@ describe "Callbacks" do
     before(:example) do |example|
     #before(:context) do
         blog.populate!
-        puts example.inspect
+        #puts example.inspect
     end
     
     it "is has one post" do
