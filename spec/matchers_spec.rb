@@ -70,7 +70,7 @@ describe "Matchers" do #ovako pasujemo samo string u blok. Kod Boostrapa smo uba
     end
     
     #fit "ovo je mnogo vazniji test da se fokusiram sada" do
-    it "ovo je mnogo vazniji test da se fokusiram sada", focus: true do
+    it "ovo je mnogo vazniji test da se fokusiram sada" do
         # startuje se sa rspec --tag focus
         #fail
     end
